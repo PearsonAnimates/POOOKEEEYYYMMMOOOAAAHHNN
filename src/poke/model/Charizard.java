@@ -1,6 +1,6 @@
 package poke.model;
 
-public class Charizard extends Pokemon implements Flying, Fire, FireStormDefense
+public class Charizard extends Charmeleon implements Flying
 {
 
 	public Charizard(int number, String name)

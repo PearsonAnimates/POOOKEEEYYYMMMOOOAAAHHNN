@@ -10,28 +10,31 @@ public class Charmeleon extends Pokemon implements Fire, FireStormDefense
 
 	public int burnStrength(int BUS)
 	{
-		
-		return 0;
+		BUS = 40;
+		return BUS;
 	}
 
 	public int biteStrength(int BIS)
 	{
-		return 0;
+		BIS = 95;
+		return BIS;
 	}
 
 	public boolean canDodge(boolean CD)
 	{
-		return false;
+		CD = true;
+		return CD;
 	}
 
 	public boolean canMakeFireStorm(boolean FS)
 	{
-		return false;
+		FS = true;
+		return FS;
 	}
 
 	public int FireStormStrength(int FTS)
 	{
-		return 0;
+		FTS = 10;
+		return FTS;
 	}
-
 }
