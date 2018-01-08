@@ -35,6 +35,11 @@ public class PokemonController
 		return false;
 	}
 	
+//	public String [] convertPokede()
+//	{
+//		String [] 
+//	}
+	
 	private void buildPokedex()
 	{
 		
