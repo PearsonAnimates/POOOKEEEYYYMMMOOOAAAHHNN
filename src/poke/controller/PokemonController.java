@@ -20,6 +20,21 @@ public class PokemonController
 		appFrame = new PokemonFrame(this);
 	}
 	
+	public List<Pokemon> getPokedex()
+	{
+		return getPokedex();
+	}
+	
+	public boolean isValidInteger(String input)
+	{
+		return false;
+	}
+	
+	public boolean isValidDouble(String input)
+	{
+		return false;
+	}
+	
 	private void buildPokedex()
 	{
 		
