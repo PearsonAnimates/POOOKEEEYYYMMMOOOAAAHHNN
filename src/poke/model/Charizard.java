@@ -43,4 +43,10 @@ public class Charizard extends Charmeleon implements Flying
 		FTS = 85;
 		return FTS;
 	}
+	
+	protected void setup()
+	{
+		this.setAttackPoints(234);
+		this.setCanEvolve(0.8);
+	}
 }
