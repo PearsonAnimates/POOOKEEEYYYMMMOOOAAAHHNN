@@ -20,10 +20,11 @@ public class PokedexPanel
 	private JLabel modifierLabel;
 	private JLabel iconLabel;
 	
-	private JCheckBox evolveableBox;
+	private JCheckBox evolvableBox;
 	private JTextField nameField;
+	private JTextField numberField;
 	private JTextField attackField;
-	private JTextField healthFielld;
+	private JTextField healthField;
 	private JTextField modifierField;
 	
 	private JTextArea descriptionArea;
@@ -38,14 +39,34 @@ public class PokedexPanel
 	private JPanel thirdType;
 	private JPanel fourthType;
 	
+	public PokedexPanel(PokemonController appController)
+	{
+		super();
+		this.appController = appController;
+		
+		appLayout = new SpringLayout();
+		
+		evolvableBox = new JCheckBox();
+		nameField = new JTextField("name");
+		numberField = new JTextField("##");
+		attackField = new JTextField("ap");
+		healthField = new JTextField("hp");
+		modifierField = new JTextField("mod");
+		
+		iconLabel = new JLabel("", new ImageIcon(getClass().getResource("/pokemon/view/images/Pokeball noice.png")), JLabel.CENTER);
+
+		nameLabel = new JLabel("new");
+		evolvableLabel = new JLabel("evolvable");
+	}
+	
 	private void updatePokedexInfo(int index)
 	{
 		nameField.setText(appController.getPokedex().get(index).getName());
-		evolveableBox.setSelected(appController.getPokedex().get(index).isCanEvolve());
+		evolvableBox.setSelected(appController.getPokedex().get(index).isCanEvolve());
 		numberField.setText(appController.getPokedex().get(index).getNumber() + "");
 		attackField.setText(appController.getPokedex().get(index).getAttackPoints() + "");
 		attackField.setText(appController.getPokedex().get(index).getHealthPoints() + "");
-		modifierField.setText(appController.getPokedex().get(index).getEnchancementModifier() + "");
+		modifierField.setText(appController.getPokedex().get(index).getEnhancementModifier() + "");
 		
 //		descriptionArea.setText(appController.getPokedex().get(index).toString());
 //		typeArea.setText("");
@@ -104,12 +125,6 @@ public class PokedexPanel
 				}
 			}
 		}
-	}
-	
-	public PokedexPanel(PokemonController appController)
-	{
-		iconLabel = new JLabel("", new ImageIcon(getClass().getResource("/pokemon/view/images/Pokeball noice.png")), JLabel.CENTER);
-		
 	}
 	
 	private void setupListeners()
