@@ -16,7 +16,7 @@ public class PokedexPanel
 	private JLabel attackLabel;
 	private JLabel nameLabel;
 	private JLabel numberLabel;
-	private JLabel evolveLabel;
+	private JLabel evolvableLabel;
 	private JLabel modifierLabel;
 	private JLabel iconLabel;
 	
@@ -57,6 +57,7 @@ public class PokedexPanel
 
 		nameLabel = new JLabel("new");
 		evolvableLabel = new JLabel("evolvable");
+		
 	}
 	
 	private void updatePokedexInfo(int index)
