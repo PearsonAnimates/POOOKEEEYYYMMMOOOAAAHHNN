@@ -22,7 +22,7 @@ public class PokemonController
 	
 	public List<Pokemon> getPokedex()
 	{
-		return getPokedex();
+		return pokedex;
 	}
 	
 	public boolean isValidInteger(String input)
@@ -48,5 +48,18 @@ public class PokemonController
 	public void start()
 	{
 		
+	}
+	
+	public void updateSelecte(int selection, int health, int attack, boolean evolve, double modify, String name)
+	{
+		Pokemon selected = pokedex.get(selection);
+		
+		selected.setAttackPoints(attack);
+		selected.setCanEvolve(evolve);
+		selected.setEnhancementModifier(modify);
+		selected.setName(name);
+		selected.setHealthPoints(health);
+		
+		FileController.savePokemonToFile((ArrayList<Pokemon>) pokedex);
 	}
 }
